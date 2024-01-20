@@ -21,7 +21,7 @@
   min-inline-size: 320px;
   min-block-size: 100dvb;
   font-family: var(--font-inter, sans-serif);
-  font-variation-settings: 'wgth' var(--font-weight-normal);
+  font-variation-settings: 'wght' var(--font-weight-normal);
   background-color: var(--background-color);
   color: var(--accent-color);
   background-image: var(--background-image);
@@ -49,8 +49,7 @@
 .header__title {
   font-size: var(--font-size-header-title);
   margin-block-start: clamp(120px, 32%, 136px);
-  font-variation-settings: "wgth" var(--font-weight-normal);
-  
+
 }
 
 .header__subtitle {
@@ -58,7 +57,6 @@
   text-transform: uppercase;
   line-height: 23px;
   margin-block-end: 5px;
-  font-variation-settings: 'wgth' var(--font-weight-normal);
 }
 
 .theme-menu {
@@ -80,7 +78,6 @@
   line-height: 14px;
   position: relative;
   transition: opacity 0.3s;
-  font-variation-settings: 'wgth' var(--font-weight-normal);
 }
 
 .theme-menu__button:disabled {
@@ -138,10 +135,10 @@ main {
 .section__title {
   font-size: var(--font-size-main-text);
   padding: 4px 24px 5px 10px;
-  font-variation-settings: "wgth" var(--font-weight-heading);
   line-height: 21.78px;
   min-height: 31px;
   background-color: var(--background-color);
+  font-variation-settings: 'wght' var(--font-weight-heading);
 }
 
 .article__grid {
@@ -160,7 +157,6 @@ main {
 
 .main__text {
   font-size: var(--font-size-main-text);
-  font-variation-settings: 'wgth' var(--font-weight-normal);
 }
 
 .image__wrapper {
@@ -237,8 +233,6 @@ main {
   font-size: var(--font-size-button-text);
   color: var(--blend-color);
   mix-blend-mode: difference;
-  font-variation-settings: 'wgth' var(--font-weight-normal);
-
 }
 
 .like-button__wrapper {
@@ -348,7 +342,7 @@ footer {
   text-transform: uppercase;
   font-family: var(--font-pressstart2p);
   color: var(--accent-color);
-  min-width: clamp(257px, 50%, 293px);;
+  min-width: clamp(257px, 50%, 293px);
   min-height: 38px;
   border: var(--bordered);
   margin: 3px 28px 28px;
@@ -359,8 +353,6 @@ dialog .floppy {
   height: 39px;
   min-width: 39px;
 }
-
-
 
 @media (width <= 375px) {
 
