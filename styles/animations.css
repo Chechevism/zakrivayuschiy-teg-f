@@ -13,72 +13,6 @@
 Кроме этого, не меняйте HTML переключателя тем. Его разметка также гарантирует работу своего скрипта.
 */
 
-.theme-menu__button:hover {
-    opacity: 0.6;
-    transition-property: opacity;
-    transition-duration: 0.3s;
-    transition-timing-function: ease;
-  }
-  
-  .theme-menu__button:focus {
-    opacity: 0.6;
-    transition-property: opacity;
-    transition-duration: 0.3s;
-    transition-timing-function: ease;
-  }
-  
-  .theme-menu__button:focus-visible {
-    opacity: 0.6;
-    transition-property: opacity;
-    transition-duration: 0.3s;
-    transition-timing-function: ease;
-  }
-
-  .theme-menu__button::after {
-    position: absolute;
-    content: "";
-    display: block;
-    outline: 1px solid var(--accent-color);
-    transform: scaleX(0);
-    transform-origin: left;
-    width: 0;
-    transition: 0.3s;
-  }
-
-  .theme-menu__button:focus-visible::after {
-    width: 100%;
-    transform: scaleX(1);
-    transition: 0.3s;
-  }  
-
-.card__like-button:focus-visible {
-    box-shadow: 2px 2px 0 var(--accent-color);
-  }
-  
-.card__icon-button:focus-visible {
-    border: 2px solid var(--accent-color);
-    transition: border 0.3s ease;
-  }
-
-  .save__button:focus-visible {
-    box-shadow: 2px 2px 0 var(--accent-color);
-  }
-  
-.slider::before {
-    content: "";
-    transform: scaleX(0);
-    width: 100%;
-    background-color: var(--accent-color);
-    transition: transform 0.5s ease-in-out;
-    transform-origin: 0;
-    position: absolute;
-    inset: 0;
-  }
-
-  .slider:hover::before {
-    transform: scaleX(1);
-  }
-  
 .heart {
     transform-origin: center;
     transition: fill 0.1s linear;
@@ -146,33 +80,6 @@
     fill: var(--heart-filler);
     transition: fill 0.3s linear;
   }
-  
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 @keyframes arrow-movement {
   

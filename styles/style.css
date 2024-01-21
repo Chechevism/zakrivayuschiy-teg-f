@@ -20,7 +20,7 @@
 .page {
   min-inline-size: 320px;
   min-block-size: 100dvb;
-  font-family: var(--font-inter, sans-serif);
+  font-family: var(--font-inter), sans-serif;
   font-variation-settings: 'wght' var(--font-weight-normal);
   background-color: var(--background-color);
   color: var(--accent-color);
@@ -34,8 +34,7 @@
 .header {
   display: grid;
   justify-items: center;
-  font-family: var(--font-pressstart2p, sans-serif);
-  border: var(--bordered);
+  font-family: var(--font-pressstart2p), fantasy;
   background-color: var(--background-color);
   width: clamp(376px, 50%, 700px);
   margin: 100px auto;
@@ -49,7 +48,8 @@
 .header__title {
   font-size: var(--font-size-header-title);
   margin-block-start: clamp(120px, 32%, 136px);
-
+  text-decoration: none;
+  outline: none;
 }
 
 .header__subtitle {
@@ -57,6 +57,10 @@
   text-transform: uppercase;
   line-height: 23px;
   margin-block-end: 5px;
+}
+
+.pointer {
+  cursor: pointer;
 }
 
 .theme-menu {
@@ -73,26 +77,60 @@
 }
 
 .theme-menu__button {
-  cursor: pointer;
   text-transform: uppercase;
   line-height: 14px;
   position: relative;
   transition: opacity 0.3s;
 }
 
+.theme-menu__button:hover {
+  opacity: 0.6;
+  transition-property: opacity;
+  transition-duration: 0.3s;
+  transition-timing-function: ease;
+}
+
+.theme-menu__button:focus {
+  opacity: 0.6;
+  transition-property: opacity;
+  transition-duration: 0.3s;
+  transition-timing-function: ease;
+}
+
+.theme-menu__button:focus-visible {
+  opacity: 0.6;
+  transition-property: opacity;
+  transition-duration: 0.3s;
+  transition-timing-function: ease;
+  outline: none;
+}
+
+.theme-menu__button::after {
+  content: '';
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  left: 0;
+  background-color: var(--accent-color);
+  transform-origin: bottom left;
+  transition: transform 0.3s ease-out;
+  transform: scaleX(0);
+}
+
+.theme-menu__button:focus-visible::after {
+  transform: scale(1);
+  transition: transform 0.3s;
+}  
+
 .theme-menu__button:disabled {
   opacity: 0.6;
+  pointer-events: none;
 }
 
 .theme-menu__button:disabled::after {
   outline: none;
-  transform: scaleX(0);
-}
-
-.theme-menu__button:hover::after {
-  width: 100%;
-  transform: scaleX(1);
-  transition: 0.3s;
+  transform: scale(0);
 }
 
 button {
@@ -113,11 +151,6 @@ button:focus {
   left: -20px;
   pointer-events: none;
   animation: arrow-movement 0.5s infinite ease-in-out alternate;
-}
-
-
-section {
-  border: var(--bordered);
 }
 
 section:not(:last-child) {
@@ -143,9 +176,6 @@ main {
 
 .article__grid {
   display: grid;
-  padding-block-start: 25px;
-  gap: 25px;
-  justify-items: end;
   background-color: var(--background-color);
 }
 
@@ -153,6 +183,7 @@ main {
   display: grid;
   gap: 27px;
   padding-inline: 25px;
+  margin-block: 25px;
 }
 
 .main__text {
@@ -163,6 +194,8 @@ main {
   position: relative;
   border-bottom: 2px solid var(--accent-color);
   border-top: 2px solid var(--accent-color);
+  min-width: clamp(0px, 50%, 696px);;
+  height: 700px;
 }
 
 .image__wrapper::before {
@@ -172,7 +205,7 @@ main {
   text-transform: uppercase;
   right: 25px;
   top: 27px;
-  font-family: var(--font-pressstart2p);
+  font-family: var(--font-pressstart2p), fantasy;
   opacity: 0.5;
 }
 
@@ -224,12 +257,22 @@ main {
 .image {
   display: block;
   max-width: 100%;
+  height: 100%;
   object-fit: cover;
   object-position: center;
 }
 
+.button__shadow {
+  box-shadow: 0 0 0 var(--accent-color);
+  transition: box-shadow 0.5s ease-in-out;
+}
+
+.button__shadow:focus-visible {
+  box-shadow: 2px 2px 0 var(--accent-color);
+}
+
 .button__text {
-  font-family: var(--font-pressstart2p);
+  font-family: var(--font-pressstart2p), fantasy;
   font-size: var(--font-size-button-text);
   color: var(--blend-color);
   mix-blend-mode: difference;
@@ -241,29 +284,41 @@ main {
   gap: 4px;
   margin-block-end: 25px;
   max-height: 38px;
+  justify-content: end;
 }
-
 
 .card__like-button {
   display: flex;
   align-items: center;
   justify-content: center;
   margin-right: 25px;
-  box-shadow: 0 0 0 var(--accent-color);
-  transition: box-shadow 0.5s ease-in-out;
   min-width: 130px;
-  max-height: 38px;
-  border: 2px solid var(--accent-color);
-  cursor: pointer;
   position: relative;
 }
 
+.slider::before {
+  content: "";
+  transform: scaleX(0);
+  width: 100%;
+  background-color: var(--accent-color);
+  transition: transform 0.5s ease-in-out;
+  transform-origin: 0;
+  position: absolute;
+  inset: 0;
+}
+
+.slider:hover::before {
+  transform: scaleX(1);
+}
 
 .card__icon-button {
-  cursor: pointer;
   transition: border 0.3s ease;
   border: 2px solid transparent;
-  height: 38px;
+}
+
+.card__icon-button:focus-visible {
+  border: 2px solid var(--accent-color);
+  transition: border 0.3s ease;
 }
 
 .like-icon {
@@ -278,7 +333,6 @@ footer {
   justify-items: center;
 }
 
-
 .save__button {
   display: flex;
   gap: 8px;
@@ -287,10 +341,7 @@ footer {
   min-height: 55px;
   padding-inline: 20px;
   margin-block-start: 50px;
-  border: 2px solid var(--accent-color);
   background-color: var(--background-color);
-  cursor: pointer;
-  transition: box-shadow 0.5s ease-in-out;
   position: relative;
   margin-block-end: 105px;
 }
@@ -302,12 +353,10 @@ footer {
   mix-blend-mode: difference;
 }
 
-
 .dialog__insert-floppy {
   background-color: var(--background-color);
   max-width: clamp(341px, 50%, 356px);
   min-height: 191px;
-  border: var(--bordered);
   position: fixed;
   inset: 0;
   padding: 0;
@@ -332,7 +381,7 @@ footer {
 
 .text__dialog {
   color: var(--accent-color);
-  font-family: var(--font-pressstart2p);
+  font-family: var(--font-pressstart2p), fantasy;
   font-size: var(--font-size-button-text);
   text-transform: uppercase;
   line-height: 21px;
@@ -340,13 +389,10 @@ footer {
 
 .dialog__ok-button {
   text-transform: uppercase;
-  font-family: var(--font-pressstart2p);
-  color: var(--accent-color);
-  min-width: clamp(257px, 50%, 293px);
+  min-width: 293px;
   min-height: 38px;
-  border: var(--bordered);
   margin: 3px 28px 28px;
-  cursor: pointer;
+  position: relative;
 }
 
 dialog .floppy {
@@ -389,6 +435,6 @@ dialog .floppy {
 
   .dialog__ok-button {
     margin: 0 40px 27px;
+    min-width: 257px;
   }
-
 }

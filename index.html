@@ -17,15 +17,15 @@
     <script src="./scripts/set-theme.js"></script>
   </head>
   <body class="page">
-    <header class="header">
-      <h1 class="header__title">&lt;/HTML&gt;</h1>
-      <h2 class="header__subtitle">закрывающий тег</h2>
+    <header class="header bordered">
+      <a href="#0" class="header__title">&lt;/HTML&gt;</a>
+      <h1 class="header__subtitle">закрывающий тег</h1>
 
       <nav class="theme-menu header__theme-menu">
         <!-- Не меняйте разметку этого списка, иначе скрипты перестанут работать -->
         <ul class="theme-menu__list">
           <li class="theme-menu__item">
-            <button type="button" data-theme="dark" class="theme-menu__button">
+            <button type="button" data-theme="dark" class="theme-menu__button pointer pointer theme-menu__button-slider">
               Темно
             </button>
           </li>
@@ -34,13 +34,13 @@
               type="button"
               data-theme="auto"
               disabled
-              class="theme-menu__button"
+              class="theme-menu__button pointer pointertheme-menu__button-slider "
             >
               Авто
             </button>
           </li>
           <li class="theme-menu__item">
-            <button type="button" data-theme="light" class="theme-menu__button">
+            <button type="button" data-theme="light" class="theme-menu__button pointer pointertheme-menu__button-slider">
               Светло
             </button>
           </li>
@@ -48,18 +48,20 @@
       </nav>
     </header>
     <main>
-      <section>
+      <section class="bordered">
+        <article class="article__grid">
         <h2 class="section__title">
           Фритрек и нулевой спринт: Подготовка к работе
         </h2>
         <div class="image__wrapper stroke">
           <img
             class="image filter__start"
-            src="./images/start.png"
-            alt="Машина"
+            src="./images/start.jpg"
+            alt="Длинная дорога"
+            loading="lazy"
           />
         </div>
-        <article class="article__grid">
+         
           <div class="main__text-box">
             <p class="main__text">
               Это было самое начало пути. На этом этапе важно было проникнуться
@@ -69,7 +71,7 @@
             <p class="main__text">Было сложно решиться на такой шаг.</p>
           </div>
           <div class="like-button__wrapper">
-            <button class="card__icon-button">
+            <button class="card__icon-button pointer">
               <svg
                 width="39"
                 height="38"
@@ -102,23 +104,25 @@
                 />
               </svg>
             </button>
-            <button class="card__like-button slider">
+            <button class="card__like-button button__shadow slider pointer bordered">
               <span class="button__text"> Like</span>
             </button>
           </div>
         </article>
       </section>
 
-      <section>
+      <section class="bordered">
+        <article class="article__grid">
         <h2 class="section__title">1 спринт: Я — чистый лист</h2>
         <div class="image__wrapper stroke">
           <img
             class="image filter__hard"
-            src="./images/hard.png"
-            alt="Машина"
+            src="./images/hard.jpg"
+            alt="Человек с головной болью"
+            loading="lazy"
           />
         </div>
-        <article class="article__grid">
+         
           <div class="main__text-box">
             <p class="main__text">
               На первых этапах мы работали со страхами и сомнениями, которые
@@ -130,7 +134,7 @@
             <p class="main__text">По началу было не понятно и сложно.</p>
           </div>
           <div class="like-button__wrapper">
-            <button class="card__icon-button">
+            <button class="card__icon-button pointer">
               <svg
                 width="39"
                 height="38"
@@ -163,23 +167,25 @@
                 />
               </svg>
             </button>
-            <button class="card__like-button slider">
+            <button class="card__like-button button__shadow slider pointer bordered">
               <span class="button__text"> Like</span>
             </button>
           </div>
         </article>
       </section>
 
-      <section>
+      <section class="bordered">
+        <article class="article__grid">
         <h2 class="section__title">1 спринт: А если не получится?</h2>
         <div class="image__wrapper stroke">
           <img
             class="image filter__scared"
-            src="./images/scared.png"
-            alt="Машина"
+            src="./images/scared.jpg"
+            alt="Напуганный человек"
+            loading="lazy"
           />
         </div>
-        <article class="article__grid">
+         
           <div class="main__text-box">
             <p class="main__text">
               Первый проект — позади! Но это всё ещё самое начало пути. Радость
@@ -189,7 +195,7 @@
             <p class="main__text">Первый проект запонится на долго.</p>
           </div>
           <div class="like-button__wrapper">
-            <button class="card__icon-button">
+            <button class="card__icon-button pointer">
               <svg
                 width="39"
                 height="38"
@@ -222,23 +228,25 @@
                 />
               </svg>
             </button>
-            <button class="card__like-button slider">
+            <button class="card__like-button button__shadow slider pointer bordered">
               <span class="button__text"> Like</span>
             </button>
           </div>
         </article>
       </section>
 
-      <section>
+      <section class="bordered">
+        <article class="article__grid">
         <h2 class="section__title">2 спринт: Погоня за идеалом</h2>
         <div class="image__wrapper stroke">
           <img
             class="image filter__ideal"
-            src="./images/ideal.png"
-            alt="Машина"
+            src="./images/ideal.jpg"
+            alt="Магнитный пузырьковый уровень"
+            loading="lazy"
           />
         </div>
-        <article class="article__grid">
+         
           <div class="main__text-box">
             <p class="main__text">
               На этом этапе вы уже достаточно разбирались в основах вёрстки,
@@ -250,7 +258,7 @@
             <p class="main__text">Нет смысла гоняться за идеалом.</p>
           </div>
           <div class="like-button__wrapper">
-            <button class="card__icon-button">
+            <button class="card__icon-button pointer">
               <svg
                 width="39"
                 height="38"
@@ -283,23 +291,25 @@
                 />
               </svg>
             </button>
-            <button class="card__like-button slider">
+            <button class="card__like-button button__shadow slider pointer bordered">
               <span class="button__text"> Like</span>
             </button>
           </div>
         </article>
       </section>
 
-      <section>
+      <section class="bordered">
+        <article class="article__grid">
         <h2 class="section__title">2 спринт: О тех, кто рядом</h2>
         <div class="image__wrapper stroke">
           <img
             class="image filter__close-people"
-            src="./images/close-people.png"
-            alt="Машина"
+            src="./images/close-people.jpg"
+            alt="Три радостных человека"
+            loading="lazy"
           />
         </div>
-        <article class="article__grid">
+         
           <div class="main__text-box">
             <p class="main__text">
               Всё это время вы были не одиноки (хотя, возможно, иногда и
@@ -312,7 +322,7 @@
             <p class="main__text">Всега можно попросить совета.</p>
           </div>
           <div class="like-button__wrapper">
-            <button class="card__icon-button">
+            <button class="card__icon-button pointer">
               <svg
                 width="39"
                 height="38"
@@ -345,23 +355,25 @@
                 />
               </svg>
             </button>
-            <button class="card__like-button slider">
+            <button class="card__like-button button__shadow slider pointer bordered">
               <span class="button__text"> Like</span>
             </button>
           </div>
         </article>
       </section>
 
-      <section>
+      <section class="bordered">
+        <article class="article__grid">
         <h2 class="section__title">3 спринт: Обходные стратегии</h2>
         <div class="image__wrapper stroke">
           <img
             class="image filter__strategy"
-            src="./images/strategy.png"
-            alt="Машина"
+            src="./images/strategy.jpg"
+            alt="Человек указывает на доску с задачами"
+            loading="lazy"
           />
         </div>
-        <article class="article__grid">
+         
           <div class="main__text-box">
             <p class="main__text">
               На этом курсе вы постоянно решали разные задачи. В какой-то момент
@@ -371,7 +383,7 @@
             <p class="main__text">Ну или просто хорошо выспаться.</p>
           </div>
           <div class="like-button__wrapper">
-            <button class="card__icon-button">
+            <button class="card__icon-button pointer">
               <svg
                 width="39"
                 height="38"
@@ -404,23 +416,25 @@
                 />
               </svg>
             </button>
-            <button class="card__like-button slider">
+            <button class="card__like-button  button__shadow slider pointer bordered">
               <span class="button__text"> Like</span>
             </button>
           </div>
         </article>
       </section>
 
-      <section>
+      <section class="bordered">
+        <article class="article__grid">
         <h2 class="section__title">3 спринт: Когда опускаются руки</h2>
         <div class="image__wrapper stroke">
           <img
             class="image filter__time"
-            src="./images/time.png"
-            alt="Машина"
+            src="./images/time.jpg"
+            alt="Много часов"
+            loading="lazy"
           />
         </div>
-        <article class="article__grid">
+         
           <div class="main__text-box">
             <p class="main__text">
               Во время учёбы часто возникает чувство, когда не знаешь, за что
@@ -432,7 +446,7 @@
             <p class="main__text">Всегда черезвычайно не хватает времени.</p>
           </div>
           <div class="like-button__wrapper">
-            <button class="card__icon-button">
+            <button class="card__icon-button pointer">
               <svg
                 width="39"
                 height="38"
@@ -465,23 +479,25 @@
                 />
               </svg>
             </button>
-            <button class="card__like-button slider">
+            <button class="card__like-button button__shadow slider pointer bordered">
               <span class="button__text"> Like</span>
             </button>
           </div>
         </article>
       </section>
 
-      <section>
+      <section class="bordered">
+        <article class="article__grid">
         <h2 class="section__title">«Сейчас я здесь»</h2>
         <div class="image__wrapper stroke">
           <img
             class="image filter__steps"
-            src="./images/steps.png"
-            alt="Машина"
+            src="./images/steps.jpg"
+            alt="Выделенное слово steps"
+            loading="lazy"
           />
         </div>
-        <article class="article__grid">
+         
           <div class="main__text-box">
             <p class="main__text">
               Сейчас вы уже очень много знаете о вёрстке. Но это только начало.
@@ -494,7 +510,7 @@
             <p class="main__text">Надеюсь, что всё получится.</p>
           </div>
           <div class="like-button__wrapper">
-            <button class="card__icon-button">
+            <button class="card__icon-button pointer">
               <svg
                 width="39"
                 height="38"
@@ -527,7 +543,7 @@
                 />
               </svg>
             </button>
-            <button class="card__like-button slider">
+            <button class="card__like-button button__shadow slider pointer bordered">
               <span class="button__text"> Like</span>
             </button>
           </div>
@@ -536,7 +552,7 @@
     </main>
     <footer>
       <button
-        class="save__button slider"
+        class="save__button pointer button__shadow slider bordered"
         onclick="window['dialog-floppy'].showModal()"
         aria-controls="dialog-floppy"
       >
@@ -547,7 +563,7 @@
       </button>
     </footer>
 
-    <dialog id="dialog-floppy" class="dialog__insert-floppy">
+    <dialog id="dialog-floppy" class="dialog__insert-floppy bordered">
       <div class="floppy-text__wrapper">
         <svg class="floppy" viewBox="0 0 28 28">
           <use href="./svg/floppy.svg#floppy"></use>
@@ -556,9 +572,9 @@
       </div>
       <button
         onclick="window['dialog-floppy'].close()"
-        class="dialog__ok-button"
+        class="dialog__ok-button pointer button__shadow slider bordered"
       >
-        ок
+      <span class="button__text"> ок</span>
       </button>
     </dialog>
 
