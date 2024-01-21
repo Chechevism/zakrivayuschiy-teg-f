@@ -194,7 +194,7 @@ main {
   position: relative;
   border-bottom: 2px solid var(--accent-color);
   border-top: 2px solid var(--accent-color);
-  min-width: clamp(0px, 50%, 696px);;
+  min-width: clamp(0px, 50%, 696px);
   height: 700px;
 }
 
@@ -256,10 +256,11 @@ main {
 
 .image {
   display: block;
-  max-width: 100%;
+  width: 100%;
   height: 100%;
   object-fit: cover;
   object-position: center;
+  
 }
 
 .button__shadow {
@@ -414,6 +415,10 @@ dialog .floppy {
   .header__subtitle {
     max-height: 14px;
     margin-block-end: 10px;
+  }
+
+  .image__wrapper {
+    max-height: 375px;
   }
 
   .save__button {
